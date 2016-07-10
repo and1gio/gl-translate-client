@@ -1,0 +1,26 @@
+{
+    "name": "gl-translate-client",
+    "description": "GL Translate Client",
+    "version": "0.0.1",
+
+    "author": {
+        "name": "Giorgi Maisuradze"
+    },
+    "maintainers": [
+        {
+            "name": "and1gio",
+            "email": "g.maisuradze88@gmail.com"
+        },
+        {
+            "name": "levansuper",
+            "email": "l.basharuli@gmail.com"
+        }
+    ],
+
+    "dependencies": {
+      "msda-http-request-helper": "latest",
+      "gl-clients-error-codes": "0.0.1"
+    },
+
+    "main": "gl-translate-client.js"
+}
