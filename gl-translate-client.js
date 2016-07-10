@@ -1,19 +1,19 @@
-var HRH = require("msda-http-request-helper");
+var GLApiRequestHelper = require("gl-api-request-helper");
 var clientErrorStore = require("gl-clients-error-codes");
 
-var MSDATranslateClient = function (config) {
+var GLTranslateClient = function (config) {
     var me = this;
     me.config = config;
-    me.hrh = new HRH(me.config);
+    me.api = new GLApiRequestHelper(me.config);
 };
 
-var translateClient = MSDATranslateClient.prototype;
+var translateClient = GLTranslateClient.prototype;
 translateClient.isReady = false;
 translateClient.languageStore = null;
 
 translateClient.helper = function (method, requestData, cb) {
     var me = this;
-    me.hrh.request(method, requestData, function (err, res) {
+    me.api.request(method, requestData, function (err, res) {
         cb(err, res);
     });
 };
@@ -21,7 +21,7 @@ translateClient.helper = function (method, requestData, cb) {
 translateClient.load = function (cb) {
     var me = this;
     if (me.config.languages) {
-        me.hrh.request("translateEntry/find/all", {}, function (err, res) {
+        me.api.request("translateEntry/find/all", {}, function (err, res) {
             if (err) {
                 return cb(err, null);
             } else {
@@ -44,7 +44,7 @@ var loadHandler = function (res, cb) {
 
         cb(null, res);
     } else {
-        var err = clientErrorStore("dataIsEmpty", null);
+        var err = clientErrorStore("DATA_IS_EMPTY", null);
         cb(err, null)
     }
 };
@@ -64,4 +64,4 @@ translateClient.get = function (language, keyword) {
     return translateClient.languageStore[keyword][language];
 };
 
-module.exports = MSDATranslateClient;
+module.exports = GLTranslateClient;

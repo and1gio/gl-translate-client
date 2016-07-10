@@ -18,7 +18,7 @@
     ],
 
     "dependencies": {
-      "msda-http-request-helper": "latest",
+      "gl-api-request-helper": "0.0.1",
       "gl-clients-error-codes": "0.0.1"
     },
 
