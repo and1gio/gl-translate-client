@@ -1,6 +1,6 @@
 {
-    "name": "gl-translate-client",
-    "description": "GL Translate Client",
+    "name": "z-translate-client",
+    "description": "Z Translate Client",
     "version": "0.0.1",
 
     "author": {
@@ -18,9 +18,8 @@
     ],
 
     "dependencies": {
-      "gl-api-request-helper": "0.0.1",
-      "gl-clients-error-codes": "0.0.1"
+      "z-api-request-helper": "0.0.1"
     },
 
-    "main": "gl-translate-client.js"
+    "main": "z-translate-client.js"
 }

@@ -1,2 +1,2 @@
-# gl-translate-client
-GL Translate Client
+# z-translate-client
+Z Translate Client
