@@ -1,7 +1,7 @@
 {
     "name": "z-translate-client",
     "description": "Z Translate Client",
-    "version": "0.0.1",
+    "version": "0.0.2",
 
     "author": {
         "name": "Giorgi Maisuradze"
@@ -18,7 +18,7 @@
     ],
 
     "dependencies": {
-      "z-api-request-helper": "0.0.1"
+      "z-api-request-helper": "0.0.5"
     },
 
     "main": "z-translate-client.js"
